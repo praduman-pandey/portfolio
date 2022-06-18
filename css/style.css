@@ -992,6 +992,7 @@ Media queries
 
     .section-hero .grid-two-column {
         grid-template-columns: 1fr;
+        padding: 1rem;
     }
 
     .section-hero-data {
