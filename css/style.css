@@ -1098,3 +1098,16 @@ Media queries
         grid-column: 1/-1;
     }
 }
+
+/* added css for hiding some secion like services date: 07-09-2022 */
+.section.section-services,.section.section-testimonial,.section.section-work-data,
+.f-services,.f-credits{
+    display: none;
+}
+li:nth-child(3) {
+    display: none;
+}
+
+.f-links li, .f-links a, .f-services li, .f-services a {
+    min-width: 88px;
+}

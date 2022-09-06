@@ -24,7 +24,9 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0,
 });
 
-observer.observe(heroSection);
+if (heroSection != null) {
+  observer.observe(heroSection);
+}
 
 
 // ========================================
@@ -35,29 +37,33 @@ const p_btns = document.querySelector(".p-btns");
 const p_btn = document.querySelectorAll(".p-btn");
 const p_img_elem = document.querySelectorAll(".img-overlay");
 
-p_btns.addEventListener('click', (e) => {
-  const p_btn_clicked = e.target;
-  // console.log(p_btn_clicked);
+if (p_btns != null) {
 
-  if(!p_btn_clicked.classList.contains('p-btn')) return;
+  p_btns.addEventListener('click', (e) => {
+    const p_btn_clicked = e.target;
+    // console.log(p_btn_clicked);
 
-  p_btn.forEach((curnElem) => curnElem.classList.remove("p-btn-active"));
+    if (!p_btn_clicked.classList.contains('p-btn')) return;
 
-  p_btn_clicked.classList.add("p-btn-active");
+    p_btn.forEach((curnElem) => curnElem.classList.remove("p-btn-active"));
 
-  // to find the number in data attr
-  const btn_num = p_btn_clicked.dataset.btnNum;
-  // console.log(btn_num);
+    p_btn_clicked.classList.add("p-btn-active");
 
-  const img_active = document.querySelectorAll(`.p-btn--${btn_num}`);
+    // to find the number in data attr
+    const btn_num = p_btn_clicked.dataset.btnNum;
+    // console.log(btn_num);
 
-  p_img_elem.forEach((curnElem) => curnElem.classList.add('p-image-not-active'));
+    const img_active = document.querySelectorAll(`.p-btn--${btn_num}`);
 
-  img_active.forEach((curnElem) => curnElem.classList.remove('p-image-not-active'));
+    p_img_elem.forEach((curnElem) => curnElem.classList.add('p-image-not-active'));
 
-  // p_img_elem
-  // p-btn--1
-});
+    img_active.forEach((curnElem) => curnElem.classList.remove('p-image-not-active'));
+
+    // p_img_elem
+    // p-btn--1
+  });
+
+}
 
 
 // swiper js code
@@ -181,3 +187,23 @@ const imgObserver = new IntersectionObserver(lazyImg, {
 });
 
 imgObserver.observe(imgRef);
+
+
+/* added css for hiding some secion like services date: 07-09-2022 */
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.onkeydown = function (e) {
+  if (event.keyCode == 123) {
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+    return false;
+  }
+  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+    return false;
+  }
+}
