@@ -1111,3 +1111,8 @@ li:nth-child(3) {
 .f-links li, .f-links a, .f-services li, .f-services a {
     min-width: 88px;
 }
+
+/* 22-09-2022 */
+footer.section {
+    padding: 9rem 0 3rem 0;
+}

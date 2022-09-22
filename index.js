@@ -108,18 +108,21 @@ widthSize.addEventListener('change', myJsmedia)
 // const heroSection = document.querySelector(".section-hero");
 const footerElem = document.querySelector(".section-footer");
 
-const scrollElement = document.createElement("div");
-scrollElement.classList.add("scrollTop-style");
+if (heroSection != null) {
+  const scrollElement = document.createElement("div");
+  scrollElement.classList.add("scrollTop-style");
 
-scrollElement.innerHTML = `<ion-icon name="arrow-up-outline" class="scroll-top"></ion-icon>`;
+  scrollElement.innerHTML = `<ion-icon name="arrow-up-outline" class="scroll-top"></ion-icon>`;
 
-footerElem.after(scrollElement);
+  footerElem.after(scrollElement);
 
-const scrollTop = () => {
-  heroSection.scrollIntoView({ behavior: "smooth" });
-};
+  const scrollTop = () => {
+    heroSection.scrollIntoView({ behavior: "smooth" });
+  };
 
-scrollElement.addEventListener("click", scrollTop);
+  scrollElement.addEventListener("click", scrollTop);
+
+}
 
 // ========================================
 //  animated counter number
@@ -166,7 +169,9 @@ const workObserver = new IntersectionObserver((entries, observer) => {
   threshold: 0,
 });
 
-workObserver.observe(workSection);
+if (workSection != null) {
+  workObserver.observe(workSection);
+}
 
 // ========================================
 //  lazy loading section
@@ -186,24 +191,29 @@ const imgObserver = new IntersectionObserver(lazyImg, {
   // rootMargin: "100px",
 });
 
-imgObserver.observe(imgRef);
+if (imgRef != null) {
+  imgObserver.observe(imgRef);
+}
 
 
-/* added css for hiding some secion like services date: 07-09-2022 */
+/* Below is a code for blocking inspect, right click in homepage date: 07-09-2022 */
 
-document.addEventListener('contextmenu', event => event.preventDefault());
+if (heroSection != null) {
 
-document.onkeydown = function (e) {
-  if (event.keyCode == 123) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-    return false;
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  document.onkeydown = function (e) {
+    if (event.keyCode == 123) {
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+      return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+      return false;
+    }
   }
 }
