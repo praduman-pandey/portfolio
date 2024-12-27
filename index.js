@@ -16,9 +16,7 @@ mobile_nav.addEventListener('click', () => {
 
 const observer = new IntersectionObserver((entries) => {
   const ent = entries[0];
-  // console.log(ent);
   !ent.isIntersecting ? document.body.classList.add("sticky") : document.body.classList.remove("sticky");
-  // document.body.classList.add("sticky");
 }, {
   root: null,
   threshold: 0,
@@ -105,7 +103,6 @@ widthSize.addEventListener('change', myJsmedia)
 //  scroll to top
 // ========================================
 
-// const heroSection = document.querySelector(".section-hero");
 const footerElem = document.querySelector(".section-footer");
 
 if (heroSection != null) {
@@ -116,12 +113,16 @@ if (heroSection != null) {
 
   footerElem.after(scrollElement);
 
-  const scrollTop = () => {
-    heroSection.scrollIntoView({ behavior: "smooth" });
+  const scrollToTop = () => {
+    // heroSection.scrollIntoView({ behavior: "smooth" });
+    const topDistance = document.documentElement.scrollTop || document.body.scrollTop;
+    if (topDistance > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, topDistance - topDistance / 8);
+    }
   };
 
-  scrollElement.addEventListener("click", scrollTop);
-
+  scrollElement.addEventListener("click", scrollToTop);
 }
 
 // ========================================
@@ -195,10 +196,9 @@ if (imgRef != null) {
   imgObserver.observe(imgRef);
 }
 
-
 /* Below is a code for blocking inspect, right click in homepage date: 07-09-2022 */
 
-if (heroSection != null) {
+if (heroSection != null && false) {
 
   document.addEventListener('contextmenu', event => event.preventDefault());
 

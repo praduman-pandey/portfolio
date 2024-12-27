@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My portfolio website to showcase the work I have done so far.">
-    <meta name="keywords" content="HTML, CSS, JavaScript, portfolio Website,">
-    <meta name="author" content="Pandey Pradhyuman">
+    <meta name="description" content="Welcome to Praduman's portfolio. I am a Magento developer specializing in creating custom solutions, optimizing performance, and building robust eCommerce websites. Explore my projects and skills.">
+    <meta name="keywords" content="Magento developer, eCommerce developer, Praduman Pandey, Adobe Commerce developer, Magento custom development, Magento modules, portfolio, web developer, projects, skills, resume, personal website">
+    <meta name="author" content="Praduman Pandey">
     <title>Home Page</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Praduman Pandey's Portfolio">
+    <meta property="og:description" content="Welcome to Praduman's portfolio. Explore my portfolio as a Magento developer. I specialize in custom modules, performance optimization, and building scalable eCommerce solutions.">
+    <meta property="og:image" content="images/og-logo.png">
+    <meta property="og:url" content="https://praduman543.github.io/MyPortfolioWebsite/">
+    <meta property="og:type" content="website">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest"> -->
-
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -55,8 +57,8 @@
             <div class="container grid grid-two-column">
                 <div class="section-hero-data">
                     <p class="hero-top-data">this is me</p>
-                    <h1 class="hero-heading">pandey pradhyuman</h1>
-                    <p class="hero-para">I'm pandey pradhuman. A Full stack Developer and freelancer. A Full stack
+                    <h1 class="hero-heading">Praduman Pandey</h1>
+                    <p class="hero-para">I'm Praduman Pandey. A Full stack Developer and freelancer. A Full stack
                         Developer and freelancer.</p>
                     <div>
                         <a href="#" class="btn hireme-btn">Hire me</a>
@@ -66,10 +68,9 @@
 
                 <div class="section-hero-image">
                     <picture>
-                        <source srcset="images/hero.webp" type="image/webp">
-                        <source srcset="images/hero-min.jpg" type="image/jpg">
-                        <img src="images/hero-min.jpg" alt="this is me pandey pradhyuman" class="hero-img">
-                        <!-- <img src="images/hero.jpg" alt="this is me pandey pradhyuman" class="hero-img"> -->
+                        <source srcset="images/webp/hero.webp" type="image/webp">
+                        <source srcset="images/hero.jpg" type="image/jpg">
+                        <img src="images/hero.jpg" alt="this is me Praduman Pandey" class="hero-img">
                     </picture>
                 </div>
             </div>
@@ -86,8 +87,7 @@
             <div class="bio-image">
                 <!-- <img src="images/biodata.jpg" alt="my bio data image"> -->
                 <!-- with the lazy loading -->
-                <!-- <img src="images/lazy1.jpg" alt="my bio data image" data-src="images/biodata.jpg" class="lazy-img"> -->
-                <img src="images/biodata.jpg" alt="my bio data image" data-src="images/biodata.jpg" class="lazy-img">
+                <img src="images/compress/bioddata-lazy.jpg" alt="my bio data image" data-src="images/compress/biodata-min.jpg" class="lazy-img">
             </div>
             <!-- bio right side data -->
             <div class="bio-data">
@@ -491,7 +491,7 @@
                 </div>
                 <div>
                     <label for="textarea"></label>
-                    <textarea name="Message" id="textarea" cols="30" rows="10" placeholder="Write your message"
+                    <textarea name="message" id="textarea" cols="30" rows="10" placeholder="Write your message"
                         autocomplete="off" minlength="5" required></textarea>
                 </div>
 
@@ -522,19 +522,19 @@
                         <span>
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </span>
-                        <a href="#">home</a>
+                        <a href="./index.html">home</a>
                     </li>
                     <li>
                         <span>
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </span>
-                        <a href="#">about</a>
+                        <a href="./about.html">about</a>
                     </li>
                     <li>
                         <span>
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </span>
-                        <a href="#">services</a>
+                        <a href="./service.html">services</a>
                     </li>
                     <li>
                         <span>
@@ -546,7 +546,7 @@
                         <span>
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </span>
-                        <a href="#">contact</a>
+                        <a href="./contact.html">contact</a>
                     </li>
                 </ul>
             </div>
