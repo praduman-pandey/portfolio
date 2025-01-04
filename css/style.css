@@ -673,7 +673,7 @@ our freelancing Section Start
 .section-freelancing {
     background-image: url('../images/folio/3.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
     position: relative;
     transition: all 0.7s linear;
