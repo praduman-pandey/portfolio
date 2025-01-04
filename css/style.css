@@ -414,7 +414,7 @@ portfolio Section Start
 }
 
 .section-portfolio p {
-    max-width: 60rem;
+    max-width: 65rem;
 }
 
 .p-btns {
@@ -1105,9 +1105,6 @@ Media queries
 /* added css for hiding some secion like services date: 07-09-2022 */
 .section.section-services,.section.section-testimonial,.section.section-work-data,
 .f-services,.f-credits{
-    display: none;
-}
-li:nth-child(3) {
     display: none;
 }
 
