@@ -1113,6 +1113,12 @@ Media queries
 }
 
 /* 22-09-2022 */
+.home .header{
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
 footer.section {
     padding: 9rem 0 3rem 0;
 }
