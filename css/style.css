@@ -1113,10 +1113,13 @@ Media queries
 }
 
 /* 22-09-2022 */
+.home.sticky .header{
+    animation: bar 0.3s ease-in;
+}
+
 .home .header{
     background-color: rgba(255, 255, 255, 1);
     box-shadow: var(--shadow);
-    position: relative;
 }
 
 footer.section {
@@ -1129,4 +1132,53 @@ footer.section {
 
 body:not(.sticky) .scrollTop-style{
     display: none;
+}
+
+/* my skills */
+.skills-container{
+    margin: 15px 0px 40px;
+
+    .skills-header .heading{
+        font-size: 3rem;
+    }
+}
+
+.skills-items{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .skill-item {
+        text-align: center;
+        margin: 15px;
+        width: 120px;
+    }
+    
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        object-fit: contain;
+    }
+    
+    .skill-name {
+        font-weight: bold;
+    }
+}
+
+@keyframes bar {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0;
+    }
 }
