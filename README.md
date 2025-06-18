@@ -3,7 +3,7 @@
 Welcome to my portfolio! This site showcases my skills, expertise, and latest projects in Magento 2 development, web design, and e-commerce solutions.
 
 ## 🌐 Live Demo
-Explore my portfolio here: [My Portfolio Website](https://praduman543.github.io/portfolio/)
+Explore my portfolio here: [My Portfolio Website](https://praduman-pandey.github.io/portfolio/)
 
 ## 🙋‍♂️ About Me
 I am Praduman Pandey, a passionate Magento 2 Developer with expertise in:
