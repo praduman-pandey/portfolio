@@ -1113,6 +1113,11 @@ Media queries
 }
 
 /* 22-09-2022 */
+.header {
+    position: relative;
+    z-index: 3;
+}
+
 .home.sticky .header{
     animation: bar 0.3s ease-in;
 }
@@ -1158,7 +1163,7 @@ body:not(.sticky) .scrollTop-style{
     .skill-item {
         text-align: center;
         margin: 15px;
-        width: 120px;
+        /* width: 120px; */
     }
     
     .skill-icon {
@@ -1180,5 +1185,12 @@ body:not(.sticky) .scrollTop-style{
 
     100% {
         top: 0;
+    }
+}
+
+@media (min-width:769px) {
+    .skills-items{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 }

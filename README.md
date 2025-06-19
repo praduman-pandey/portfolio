@@ -31,7 +31,7 @@ My dedication lies in crafting innovative solutions that empower businesses to t
 I am available for freelancing and collaboration opportunities. Feel free to connect with me:
 - **Email:** [ppraduman6@gmail.com](mailto:ppraduman6@gmail.com)
 - **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/praduman-pandey)
-- **GitHub:** [GitHub Profile](https://github.com/praduman543)
+- **GitHub:** [GitHub Profile](https://github.com/praduman-pandey)
 
 ---
 
