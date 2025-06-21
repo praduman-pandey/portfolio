@@ -71,39 +71,41 @@ if (p_btns != null) {
 
 
 // swiper js code
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  autoplay: {
-    delay: 2500
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+if (typeof Swiper !== "undefined") {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 2500
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
-const myJsmedia = (widthSize) => {
-  if (widthSize.matches) {
-    new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-    });
-  } else {
-    new Swiper(".mySwiper", {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    });
+  const myJsmedia = (widthSize) => {
+    if (widthSize.matches) {
+      new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      });
+    } else {
+      new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      });
+    }
   }
+
+  const widthSize = window.matchMedia('(max-width:780px)');
+
+  // Call listener function at run time
+  myJsmedia(widthSize);
+
+  // Attach listener function on state changes
+  widthSize.addEventListener('change', myJsmedia)
 }
-
-const widthSize = window.matchMedia('(max-width:780px)');
-
-// Call listener function at run time
-myJsmedia(widthSize);
-
-// Attach listener function on state changes
-widthSize.addEventListener('change', myJsmedia)
 
 // ========================================
 //  scroll to top

@@ -1,0 +1,22 @@
+<header class="header">
+    <a href="{{ site.url}}">
+        <img src="assets/images/logo.png" alt="our main logo" class="logo">
+    </a>
+
+    <nav class="navbar">
+        <ul class="navbar-lists">
+            {% for item in site.data.navigation %}
+                <li>
+                    <a href="{{ item.link }}" class="navbar-link{% if page.url==item.link %} current{% endif; %}">
+                        {{ item.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <div class="mobile-navbar-btn">
+        <ion-icon class="mobile-nav-icon" name="menu-outline"></ion-icon>
+        <ion-icon class="mobile-nav-icon" name="close-outline"></ion-icon>
+    </div>
+</header>

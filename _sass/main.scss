@@ -102,7 +102,8 @@ Header Section Start
 }
 
 .navbar-link:hover,
-.navbar-link:active {
+.navbar-link:active,
+.navbar-link.current {
     color: var(--helper);
 }
 
@@ -157,17 +158,14 @@ Reusable Code Section
 
 .grid-two-column {
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-columns: 1fr 1fr; */
 }
 
 .grid-three-column {
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-columns: 1fr 1fr; */
 }
 
 .grid-four-column {
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-columns: 1fr 1fr; */
 }
 
 
@@ -781,14 +779,6 @@ our footer Section Start
     text-transform: capitalize;
 }
 
-.f-links span,
-.f-services span,
-.f-address span {
-    margin-right: 1rem;
-    position: relative;
-    top: 3px;
-}
-
 .f-address p,
 .f-address p a {
     font-style: normal;
@@ -819,7 +809,8 @@ our footer Section Start
 }
 
 .section-footer a:hover,
-.section-footer a:active {
+.section-footer a:active,
+.section-footer a.current {
     color: var(--white);
     transition: all 0.3s linear;
 }
@@ -1103,12 +1094,10 @@ Media queries
 }
 
 /* added css for hiding some secion like services date: 07-09-2022 */
-.section.section-services,.section.section-testimonial,.section.section-work-data,
-.f-services,.f-credits{
-    display: none;
-}
-
-.f-links li, .f-links a, .f-services li, .f-services a {
+.f-links li,
+.f-links a,
+.f-services li,
+.f-services a {
     min-width: 88px;
 }
 
@@ -1193,4 +1182,43 @@ body:not(.sticky) .scrollTop-style{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+#skip-to-content {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+    top: -10px;
+}
+
+.f-links li a,
+.f-address a,
+.f-address .location p{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    ion-icon{
+        height: 21px;
+    }
+
+    span{
+        position: static;
+    }
+}
+
+.f-address [name="mail-outline"]{
+    position: relative;
+    top: 2px;
+}
+
+.hero-heading {
+    font-size: 5.6rem;
+}
+
+.f-social-icons{
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--helper-tint);
 }

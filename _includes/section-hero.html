@@ -1,0 +1,27 @@
+<!-- ======================================== 
+        Our Main Hero Section Start  
+========================================  -->
+
+<main>
+    <section class="section-hero section">
+        <div class="container grid grid-two-column">
+            <div class="section-hero-data">
+                <p class="hero-top-data">this is me</p>
+                <h1 class="hero-heading">{{ site.github.owner_display_name }}</h1>
+                <p class="hero-para">I'm {{ site.github.owner_display_name }}, a Magento 2 Developer specializing in custom module creation, extension development, and theme customization.</p>
+                <div>
+                    <a href="#section-biodata" class="btn">Know More</a>
+                </div>
+            </div>
+            <!-- hero section right side -->
+
+            <div class="section-hero-image">
+                <picture>
+                    <source srcset="assets/images/webp/hero.webp" type="image/webp">
+                    <source srcset="assets/images/hero.jpg" type="image/jpg">
+                    <img src="assets/images/hero.jpg" alt="this is me {{ site.github.owner_display_name }}" class="hero-img">
+                </picture>
+            </div>
+        </div>
+    </section>
+</main>

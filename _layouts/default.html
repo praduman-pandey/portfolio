@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+  <meta charset="UTF-8">
+
+  {% seo %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  {% if page.meta_keywords %}
+  <meta name="keywords" content="{{ page.meta_keywords }}">
+  {% endif %}
+
+  {% include head-custom.html %}
+
+  {% if page.url == '/' and site.content_enabled %}
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  {% endif %}
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/index.js' | relative_url }}"></script>
+</head>
+
+<body {% if page.url=='/' %} class="home" {% endif %}>
+  {% if false %}
+  <a id="skip-to-content" href="#content">Skip to the content.</a>
+  {% endif %}
+
+  {% include navigation.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  <!-- ======================================== 
+        Our javacript Section Start  
+  ========================================  -->
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  {% if page.url == '/' and site.content_enabled %}
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  {% endif %}
+</body>
+
+</html>

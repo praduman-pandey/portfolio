@@ -1,0 +1,130 @@
+{% assign services_enabled = page.show_services | default: site.show_services %}
+
+{% assign grid_class = "grid-three-column" %}
+{% if services_enabled %}
+  {% assign grid_class = "grid-four-column" %}
+{% endif %}
+
+<footer class="section section-footer">
+    <div class="container grid {{ grid_class }}">
+        <div class="f-about">
+            <h3>About</h3>
+            <p>Magento 2 Developer with expertise in custom module creation, extension development, and theme customization.Focused on building scalable and efficient e-commerce platforms that support business growth.</p>
+        </div>
+        <div class="f-links">
+            <h3>Links</h3>
+            <ul>
+                {% for item in site.data.navigation %}
+                    <li>
+                        <a href="{{ item.link }}" class="{% if page.url==item.link %} current{% endif; %}">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <span>
+                                {{ item.name }}
+                            </span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- end -->
+         
+        {% if services_enabled %}
+        <div class="f-services">
+            <h3>Services</h3>
+            <ul>
+                <li>
+                    <span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </span>
+                    <a href="#">web design</a>
+                </li>
+                <li>
+                    <span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </span>
+                    <a href="#">web development</a>
+                </li>
+                <li>
+                    <span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </span>
+                    <a href="#">web design</a>
+                </li>
+                <li>
+                    <span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </span>
+                    <a href="#">web development</a>
+                </li>
+                <li>
+                    <span>
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </span>
+                    <a href="#">web design</a>
+                </li>
+            </ul>
+        </div>
+        {% endif %}
+        <!-- end -->
+
+        <div class="f-address">
+            <h3>Have a Questions?</h3>
+            <address>
+                <div class="location">
+                    <p>
+                        <ion-icon name="location-outline"></ion-icon>
+                        <span>
+                            Ahmedabad, India
+                        </span> 
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <a href="tel:+919033300815">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <span>+91 903300815</span>
+                        </a>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <a href="mailto:ppraduman6@gmail.com">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>ppraduman6@gmail.com</span>
+                        </a>
+                        <span>
+                    </p>
+                </div>
+            </address>
+        </div>
+        <!-- end -->
+    </div>
+
+    <div class="container">
+        <div class="f-social-icons">
+            <a href="{{ site.github.owner_url }}" target="_blank">
+                <ion-icon class="icons" name="logo-github"></ion-icon>
+            </a>
+
+            <a href="https://www.linkedin.com/in/praduman-pandey" target="_blank">
+                <ion-icon class="icons" name="logo-linkedin"></ion-icon>
+            </a>
+
+            <a href="https://www.instagram.com/praduman_pandey_02" target="_blank">
+                <ion-icon class="icons" name="logo-instagram"></ion-icon>
+            </a>
+
+            {% if site.content_enabled %}
+            <a href="https://www.facebook.com/yourname" target="_blank">
+                <ion-icon class="icons" name="logo-facebook"></ion-icon>
+            </a>
+            {% endif %}
+        </div>
+
+        <div class="f-credits">
+            <p>Copyright &copy;{{ "now" | date: "%Y" }} All rights reserved</p>
+        </div>
+    </div>
+</footer>
