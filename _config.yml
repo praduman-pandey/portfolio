@@ -5,6 +5,7 @@ title: Praduman Pandey
 tagline: Magento 2 Developer
 theme: jekyll-theme-cayman
 repository: praduman-pandey/portfolio
+baseurl: ""                          # Leave empty if deploying to root
 
 # --------------------------------------
 # ✅ Plugin Configuration

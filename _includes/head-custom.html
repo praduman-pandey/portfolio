@@ -1,6 +1,10 @@
 <!-- Setup Google Analytics -->
 {% include head-custom-google-analytics.html %}
 
-<link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico">
+{% if jekyll.environment == "production" %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/portfolio/favicon.ico">
+{% else %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico">
+{% endif %}
 
 <!-- end custom head snippets -->
