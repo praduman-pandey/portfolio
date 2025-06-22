@@ -1,0 +1,135 @@
+/* ===========================================
+    My Skills Section Start
+======================================= */
+
+.skills-container{
+    margin: 15px 0px 40px;
+
+    .skills-header .heading{
+        font-size: 3rem;
+    }
+}
+
+.skills-items{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .skill-item {
+        text-align: center;
+        margin: 15px;
+        /* width: 120px; */
+    }
+    
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        object-fit: contain;
+    }
+    
+    .skill-name {
+        font-weight: bold;
+    }
+}
+
+
+/* 22-09-2022 */
+.header {
+    position: relative;
+    z-index: 3;
+}
+
+.home.sticky .header{
+    animation: bar 0.3s ease-in;
+}
+
+.home .header{
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: var(--shadow);
+}
+
+footer.section {
+    padding: 9rem 0 3rem 0;
+}
+
+.section-hero {
+    padding-top: 4.5rem;
+}
+
+body:not(.sticky) .scrollTop-style{
+    display: none;
+}
+
+
+#skip-to-content {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+    top: -10px;
+}
+
+.f-links li a,
+.f-address a,
+.f-address .location p{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    ion-icon{
+        height: 21px;
+    }
+
+    span{
+        position: static;
+    }
+}
+
+.f-address [name="mail-outline"]{
+    position: relative;
+    top: 2px;
+}
+
+.hero-heading {
+    font-size: 5.6rem;
+}
+
+.f-social-icons{
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--helper-tint);
+}
+
+/* ===========================================
+    Media queries
+======================================= */
+
+@media (min-width:769px) {
+    .skills-items{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* ===========================================
+    Animations
+======================================= */
+
+@keyframes bar {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0;
+    }
+}

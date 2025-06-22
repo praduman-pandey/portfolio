@@ -1,0 +1,98 @@
+
+.bio-progress-bar {
+    width: 90%;
+    height: 0.8rem;
+    background-color: var(--para-tint);
+    border-radius: 10rem;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.bio-progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    /* for filling progress bar according to %.for html progress.*/
+    height: inherit;
+    background: var(--gradientSupport);
+    border-radius: 10rem;
+}
+
+.bio-progress-2::before {
+    /* for html progress */
+    width: 99%;
+}
+
+.bio-progress-3::before {
+    /* for css progress */
+    width: 80%;
+}
+
+.bio-progress-4::before {
+    /* for Boostrap progress */
+    width: 75%;
+}
+
+.bio-progress-5::before {
+    /* for JS progress */
+    width: 70%;
+}
+
+.bio-progress-6::before {
+    /* for MERN progress */
+    width: 70%;
+}
+
+
+.bio-progress-bar span {
+    position: absolute;
+    top: 1.8rem;
+    width: 4rem;
+    height: 2rem;
+    background: var(--helper);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: 0;
+}
+
+.bio-progress-bar span {
+    /* left: 80%; */
+    /*  80 - 4 = 76 */
+    left: 76%;
+    /* for showing percentage arrow in center we minus 4% from width */
+}
+
+.bio-progress-2 span {
+    left: 95%;
+}
+
+.bio-progress-3 span {
+    left: 76%;
+}
+
+.bio-progress-4 span {
+    left: 71%;
+}
+
+.bio-progress-5 span {
+    left: 66%;
+}
+
+
+/* to create caret(small triangle) */
+
+.bio-progress-bar span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.8rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+    top: -1.6rem;
+}
