@@ -225,3 +225,14 @@ if (heroSection != null && false) {
     }
   }
 }
+
+// Header Link with # id for section
+const navItems = document.querySelectorAll('.navbar-lists .navbar-link[href*="#"]');
+
+navItems.forEach(navItem => {
+  navItem.addEventListener('click', () => {
+    if (headerElem.classList.contains('active')) {
+      headerElem.classList.remove('active');
+    }
+  });
+});
