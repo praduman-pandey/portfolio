@@ -108,6 +108,10 @@ body:not(.sticky) .scrollTop-style{
     border-bottom: 1px solid var(--helper-tint);
 }
 
+.portfolio-images img{
+    height: auto;
+}
+
 /* ===========================================
     Media queries
 ======================================= */

@@ -13,8 +13,7 @@
         <div class="bio-image">
             <!-- <img src="assets/images/biodata.jpg" alt="my bio data image"> -->
             <!-- with the lazy loading -->
-            <img src="assets/images/hero.jpg" alt="my bio data image" data-src="assets/images/hero.jpg"
-                class="lazy-img">
+            <img src="assets/images/hero.jpg" alt="my bio data image" data-src="assets/images/hero.jpg" fetchpriority="high" class="lazy-img">
         </div>
         {% endif %}
 
@@ -71,15 +70,17 @@
                         <h3 class="skill-name">Git</h3>
                     </div>
 
-                    <!-- <div class="skill-item">
-                    <img src="assets/images/skills/mysql-original-wordmark.svg" class="skill-icon" width="60" alt="MySql">
-                    <h3 class="skill-name">MySql</h3>
-                </div>
+                    {% if false %}
+                    <div class="skill-item">
+                        <img src="assets/images/skills/mysql-original-wordmark.svg" class="skill-icon" width="60" alt="MySql">
+                        <h3 class="skill-name">MySql</h3>
+                    </div>
 
-                <div class="skill-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg" class="skill-icon" width="60" alt="MySql">
-                    <h3 class="skill-name">MySql</h3>
-                </div> -->
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg" class="skill-icon" width="60" alt="MySql">
+                        <h3 class="skill-name">MySql</h3>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
 
