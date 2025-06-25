@@ -280,7 +280,8 @@ BIO Section Start
 }
 
 .bio-image img {
-    width: 80%;
+    width: 100%;
+    max-width: 80%;
     box-shadow: -2rem -2rem 0 0 var(--helper);
     display: inline-block;
 }
