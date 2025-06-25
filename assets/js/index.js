@@ -111,6 +111,17 @@ if (typeof Swiper !== "undefined") {
 //  scroll to top
 // ========================================
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // heroSection.scrollIntoView({ behavior: "smooth" });
+  
+  // let topDistance = document.documentElement.scrollTop || document.body.scrollTop;
+  // if (topDistance > 0) {
+  //   window.requestAnimationFrame(scrollToTop);
+  //   window.scrollTo(0, topDistance - topDistance / 8);
+  // }
+};
+
 const footerElem = document.querySelector(".section-footer");
 
 if (heroSection != null) {
@@ -120,15 +131,6 @@ if (heroSection != null) {
   scrollElement.innerHTML = `<ion-icon name="arrow-up-outline" class="scroll-top"></ion-icon>`;
 
   footerElem.after(scrollElement);
-
-  const scrollToTop = () => {
-    // heroSection.scrollIntoView({ behavior: "smooth" });
-    const topDistance = document.documentElement.scrollTop || document.body.scrollTop;
-    if (topDistance > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, topDistance - topDistance / 8);
-    }
-  };
 
   scrollElement.addEventListener("click", scrollToTop);
 }
