@@ -16,7 +16,7 @@
             <ul>
                 {% for item in site.data.navigation %}
                     <li>
-                        <a href="{{ site.baseurl }}{{ item.link }}" class="{% if page.url==item.link %} current{% endif; %}">
+                        <a href="{{ item.link }}" class="{% if page.url==item.link %} current{% endif; %}">
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                             <span>
                                 {{ item.name }}
